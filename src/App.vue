@@ -18,15 +18,22 @@
       type="text"
       v-model.lazy="eventData.title"
     >
-    <p>{{ eventData.title }}</p>
+    <pre>{{ eventData.title }}</pre>
     <label for="maxNumber">最大人数</label>
     <input
       id="maxNumber"
       type="number"
       v-model.number="eventData.maxNumber"
     >
-    <p>{{ eventData.maxNumber }}</p>
+    <pre>{{ eventData.maxNumber }}</pre>
     <p>{{ typeof eventData.maxNumber }}</p>
+    <label for="host">主催者</label>
+    <input
+      id="host"
+      type="text"
+      v-model.trim="eventData.host"
+    >
+    <pre>{{ eventData.host }}</pre>
   </div>
 </div>
 </template>
