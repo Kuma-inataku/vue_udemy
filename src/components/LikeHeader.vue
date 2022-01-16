@@ -1,6 +1,6 @@
 <template>
   <div>
-    <slot name="title">
+    <slot name="title" :user="user" text="text">
 
     </slot>
     
@@ -15,12 +15,16 @@
 
 <script>
 export default {
-  props:{
-    headerText: {
-      type: String,
+  data() {
+    return {
+      user: {
+        firstName: "Jack",
+        lastName: "Dolnald",
+      }
     }
   }
 }
+
 </script>
 
 <style scoped>
