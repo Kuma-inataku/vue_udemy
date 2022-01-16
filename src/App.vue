@@ -8,8 +8,6 @@
   <button @click="currentComponent = 'Home'">Home</button>
   <button @click="currentComponent = 'About'">About</button>
   <component :is="currentComponent"></component>
-  <!-- <About v-if="currentComponent === 'About'"></About> -->
-  <!-- <Home v-if="currentComponent === 'Home'"></Home> -->
 </div>
 </template>
 
