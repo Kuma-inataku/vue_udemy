@@ -1,4 +1,11 @@
 <template>
-  <h1>トータルいいね</h1>
+  <div>
+    <slot></slot>
+  </div>
 </template>
 
+<script>
+export default {
+  
+}
+</script>
