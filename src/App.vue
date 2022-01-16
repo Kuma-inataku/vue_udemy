@@ -1,6 +1,6 @@
 <template>
 <div>
-  <LikeHeader>
+  <LikeHeader headerText="hello">
     <h1>トータルいいね数</h1>
     <h2>{{ number }}</h2>
   </LikeHeader>
