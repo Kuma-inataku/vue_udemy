@@ -1,4 +1,4 @@
 <template>
-  <h1>いいね</h1>
+  <h1>トータルいいね</h1>
 </template>
 
