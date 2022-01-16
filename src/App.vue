@@ -2,7 +2,7 @@
 <div>
   <LikeHeader></LikeHeader>
   <h2>{{ number }}</h2>
-  <LikeNumber :totalNumber="number" :testProps="hoge"></LikeNumber>
+  <LikeNumber :totalNumber="number" :testProps="hoge" @my-click="incrementNumber"></LikeNumber>
   <LikeNumber></LikeNumber>
 </div>
 </template>
@@ -20,6 +20,11 @@ export default {
   },
   components: {
     LikeHeader
+  },
+  methods: {
+    incrementNumber(value) {
+      this.number = value;
+    }
   }
 }
 </script>
