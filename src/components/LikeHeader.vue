@@ -1,9 +1,13 @@
 <template>
   <div>
-    <slot>
-      <h2>デフォルトのタイトル</h2>
+    <slot name="title">
+
     </slot>
-    {{ headerText }}
+    <hr>
+    <p>いいねの数</p>
+    <slot name="number">
+
+    </slot>
   </div>
 </template>
 
