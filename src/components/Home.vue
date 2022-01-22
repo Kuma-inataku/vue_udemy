@@ -1,9 +1,16 @@
 <template>
   <div>
-  <p v-border:solid.round.shadow="{width: '3px', color: 'red'}">{{ tmpData }}</p>
-  <h2>{{ title | lowerCase }}</h2>
-  <h2>{{ subTitle | upperCase }}</h2>
-  <h2>{{ subTitle | upperCase | lowerCase }}</h2>
+    <p v-border:solid.round.shadow="{width: '3px', color: 'red'}">{{ tmpData }}</p>
+    <h2>{{ title | lowerCase }}</h2>
+    <h2>{{ subTitle | upperCase }}</h2>
+    <h2>{{ subTitle | upperCase | lowerCase }}</h2>
+
+    <p>{{ number }}</p>
+    <button
+      @click="number++"
+    >
+      +1
+    </button>
   </div>
 </template>
 
@@ -14,6 +21,7 @@ export default {
       tmpData: "hello",
       title: "Welcome to Tokyo!!",
       subTitle: "Tokyo is Great!!",
+      number: 0,
     }
   },
   filters: {
