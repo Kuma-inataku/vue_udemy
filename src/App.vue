@@ -16,7 +16,8 @@
     <input
       id="title"
       type="text"
-      v-model.lazy="eventData.title"
+      :value="eventData.title"
+      @input="eventData.title = $event.target.value" 
     >
     <pre>{{ eventData.title }}</pre>
     <label for="maxNumber">最大人数</label>
