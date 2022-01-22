@@ -11,23 +11,23 @@
     >
       +1
     </button>
+    <CounterNumber></CounterNumber>
   </div>
 </template>
 
 <script>
+import CounterNumber from "./CountNumber.vue";
+import { tokyoNumber } from "@/tokyoNumber";
+
 export default {
+  mixins: [tokyoNumber],
   data() {
     return {
       tmpData: "hello",
-      title: "Welcome to Tokyo!!",
-      subTitle: "Tokyo is Great!!",
-      number: 0,
     }
   },
-  filters: {
-    lowerCase(value) {
-      return value.toLowerCase();
-    }
+  components: {
+    CounterNumber,
   },
   directives: {
     border(el, binding) {
