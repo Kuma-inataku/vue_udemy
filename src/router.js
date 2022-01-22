@@ -25,7 +25,10 @@ export default new Router({
         default: Users,
         header: HeaderUsers,
       },
-      props :true,
+      props : {
+        default: true,
+        header: false,
+      },
       children: [
         {
           path: "posts",
@@ -38,5 +41,10 @@ export default new Router({
         },
       ]
     },
+    {
+      // path: '/hello',
+      path: '*',
+      redirect: { path: "/" },
+    }
   ]
 })
