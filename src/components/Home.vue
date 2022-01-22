@@ -1,9 +1,14 @@
 <template>
-  <p v-border:solid.round.shadow="{width: '3px', color: 'red'}">Home</p>
+  <p v-border:solid.round.shadow="{width: '3px', color: 'red'}">{{ tmpData }}</p>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      tmpData: "hello",
+    }
+  },
   directives: {
     border(el, binding) {
       el.style.borderWidth = binding.value.width;
