@@ -45,5 +45,22 @@ export default new Router({
       path: '/hello',
       redirect: { path: "/" },
     }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    console.log(to);
+    console.log(from);
+    console.log(savedPosition);
+    if (savedPosition) {
+      return savedPosition;
+    }
+    if (to.hash) {
+      return {
+        selector: "#next-user",
+      }
+    }
+    return {
+      x: 0,
+      y: 0,
+    }
+  }
 })
