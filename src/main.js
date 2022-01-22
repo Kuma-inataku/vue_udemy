@@ -10,7 +10,7 @@ Vue.filter("upperCase", function (value) {
 })
 Vue.mixin({
   created() {
-    console.log("global.mixin!!!");
+    // console.log("global.mixin!!!");
   }
 })
 

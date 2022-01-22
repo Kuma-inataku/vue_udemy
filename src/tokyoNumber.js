@@ -12,6 +12,6 @@ export const tokyoNumber = {
     }
   },
   created() {
-    console.log("created in mixin!");
+    // console.log("created in mixin!");
   }
 }
