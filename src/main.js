@@ -8,9 +8,6 @@ Vue.config.productionTip = false
 router.beforeEach((to, from, next) => {
   console.log(to);
   console.log(from);
-  if (to.path === "/users/1") {
-    next({ path: '/'});
-  }
   next();
 });
 
