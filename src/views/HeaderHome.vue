@@ -31,7 +31,6 @@ import { mapActions } from "vuex";
 export default {
   methods: {
     ...mapActions(["increment", "decrement"]),
-    // ...mapMutations(["increment", "decrement"]),
   }
 }
 </script>
