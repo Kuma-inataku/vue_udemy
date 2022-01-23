@@ -28,11 +28,11 @@
 export default {
   methods: {
     increment() {
-      this.$store.state.count++;
+      this.$store.commit('increment', 2);
     },
     decrement() {
-      this.$store.state.count--;
-    }
+      this.$store.commit('decrement', 2);
+    },
   }
 }
 </script>
