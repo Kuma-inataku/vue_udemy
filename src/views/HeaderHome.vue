@@ -18,21 +18,18 @@
       >
         Users
       </router-link>
-      <button @click="increment">+1</button>
-      <button @click="decrement">-1</button>
+      <button @click="increment(2)">+1</button>
+      <button @click="decrement(2)">-1</button>
     </nav>
   </div>
 </template>
 
 <script>
+import { mapMutations } from "vuex";
+
 export default {
   methods: {
-    increment() {
-      this.$store.commit('increment', 2);
-    },
-    decrement() {
-      this.$store.commit('decrement', 2);
-    },
+    ...mapMutations(["increment", "decrement"]),
   }
 }
 </script>
