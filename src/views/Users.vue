@@ -25,24 +25,5 @@
 <script>
 export default {
   props: ["id"],
-  beforeRouteEnter(to, from, next) {
-    console.log('beforeRouteEnter');
-    next(vm => {
-      console.log(vm.id);
-    });
-  },
-  beforeRouteUpdate(to, from, next) {
-    console.log('beforeRouteUpdate');
-    next();
-  },
-  beforeRouteLeave(to, from, next) {
-    console.log('beforeRouteLeave');
-    const isLeave = window.confirm("本当に？");
-    if(isLeave){
-      next();
-    }else{
-      next(false);
-    }
-  }
 }
 </script>
